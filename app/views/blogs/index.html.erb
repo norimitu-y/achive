@@ -1,0 +1,23 @@
+<h1>ブログ一覧</h1>
+
+<p><%= notice %></p>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+  
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.content %></td>
+      
+      <td><%= link_to "ブログの詳細", blog_path(blog.id) %></td>
+      <td><%= link_to "ブログの編集", edit_blog_path(blog.id) %></td>
+      <td><%= link_to "ブログの消去", blog_path(blog.id), method: :delete, data: {confirm: "本当に削除していいですか？"} %></td>
+    </tr>
+  <% end %>  
+</table>
+
+<%= link_to "新しいブログの投稿", new_blog_path %>
