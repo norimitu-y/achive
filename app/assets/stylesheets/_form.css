@@ -1,0 +1,24 @@
+._form {
+    text-align: center;
+}
+.blog_content {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.blog_content label {
+  width: 56px;
+}
+.blog_content textarea {
+    border-radius: 8px;
+    font-size: 15px;
+    height: 60px;
+    border-color: black;
+    padding-left: 10px;
+}
+.blog_title textarea {
+    border-radius: 8px;
+    font-size: 15px;
+    height: 30px;
+    border-color: black;
+    padding-left: 10px;
+}

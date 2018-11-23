@@ -10,6 +10,58 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap/dist/css/bootstrap.min
  *= require_tree .
  *= require_self
  */
+ html {
+    height: 100%;
+}
+.body {
+    background-color: #F5F5F5;
+    font-family: "游ゴシック体",YuGothic;
+    min-height: 100%;
+    position: relative;
+}
+.nav {
+  height: 50px;
+}
+.navbar-default {
+  background-color: rgba(12, 19, 173, 0.87);
+}
+.navbar-default .navbar-nav > li > a {
+  height: 50px;
+  font-family: "游ゴシック体",YuGothic;
+  font-size: 17px;
+  background-color: rgba(12, 19, 173, 0.87);
+  color: white;
+  padding-top: 15px;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-toggle {
+  margin-top: 15px;
+}
+ .container {
+     width: 980px;
+     margin: 0 auto;
+     min-height: 100%;
+     position: relative;
+     overflow: scroll;
+ }
+ .footer {
+     background-color: rgba(12, 19, 173, 0.87);
+     height: 40px;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+     display: table;
+ }
+ .footer p {
+     color: white;
+     font-size: 15px;
+     text-align: center;
+     vertical-align: middle;
+     display: table-cell;
+ }

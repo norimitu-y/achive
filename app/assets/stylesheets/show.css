@@ -1,0 +1,13 @@
+.show {
+    text-align: center;
+}
+.blog_title {
+  margin-bottom: 50px;
+  font-size: 15px;
+}
+.blog_title p, .blog_content p {
+  font-size: 15px;
+}
+.title, .content {
+  font-size: 20px;
+}

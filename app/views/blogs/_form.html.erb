@@ -1,24 +1,26 @@
-<%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
+<div class="_form">
+  <%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
+    <% if @blog.errors.any? %>
+      <div id = "error_explanation">
+        <h2><%= @blog.errors.count %>件のエラーがあります</h2>
+        <ul>
+          <% @blog.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <% if @blog.errors.any? %>
-    <div id = "error_explanation">
-      <h2><%= @blog.errors.count %>件のエラーがあります</h2>
-      <ul>
-        <% @blog.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>  
-      </ul>
+    <div class = "blog_title">
+      <!--<%= form.label :title, "タイトル" %>-->
+      <p>【タイトル】</p>
+      <%= form.text_area :title %>
     </div>
+    <div class = "blog_content">
+      <!--<%= form.label :content, "内容" %>-->
+      <p>【本文】</p>
+      <%= form.text_area :content %>
+    </div>
+    <%= form.submit value = "投稿 " %>
   <% end %>
-  
-  <div class = "blog_content">
-    <%= form.label :title, "タイトル" %>
-    <%= form.text_field :title %>
-  </div>
-  <div class = "blog_content">
-    <%= form.label :content, "内容" %>
-    <%= form.text_field :content %>
-  </div>
-  <%= form.submit value = "投稿 " %>
-  
-<% end %> 
+</div>

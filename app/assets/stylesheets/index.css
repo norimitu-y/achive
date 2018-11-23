@@ -1,9 +1,4 @@
-// Place all the styles related to the blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-/*ul {
+ul {
   padding-left: 0;
   height: 300px;
   overflow: scroll;
@@ -54,4 +49,4 @@ margin: 10px 7px 15px 5px;
 }
 p {
   font-size: 18px;
-}*/
+}
