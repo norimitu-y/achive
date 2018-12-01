@@ -12,7 +12,7 @@
 }
 h3 {
   text-align: center;
-  margin: 70px 0 60px 0;
+  margin: 50px 0 45px 0;
 }
 .top_btn {
     display: block;
@@ -23,7 +23,7 @@ h3 {
     border: solid 1px black;
     border-radius: 20px;
     transition: .4s;
-    width: 95px;
+    width: 130px;
     height: 35px;
     font-size: 15px;
 }
@@ -32,7 +32,6 @@ h3 {
     background: rgba(12, 19, 173, 0.87);
     color: white;
 }
-/*.top_btn {
-  margin: 0 auto;
-  display: block;
-}:/
+.top {
+  margin-bottom: 20px;
+}

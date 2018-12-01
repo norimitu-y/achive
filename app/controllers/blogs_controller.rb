@@ -1,8 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:show, :edit, :update, :destroy]
+  before_action :login, only:[:index, :new, :edit, :show, :destroy]
 
   def top
-  end  
+  end
 
   def index
     @blogs = Blog.all
@@ -24,7 +25,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     if @blog.save
-      redirect_to blogs_path, notice: "ブログを作成しました!"
+      redirect_to blogs_path, notice: "新しいブログを作成しました!"
     else
       render "new"
     end
@@ -59,6 +60,13 @@ class BlogsController < ApplicationController
 
   def set_blog
     @blog = Blog.find(params[:id])
+  end
+
+  def login
+    if logged_in?
+    else
+      redirect_to new_session_path
+    end
   end
 
 end

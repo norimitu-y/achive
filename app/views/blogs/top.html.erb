@@ -3,5 +3,8 @@
 </div>
 <h3>このブログサイトのCodeを触れて、Programの練習をしよう！</h3>
 <div class="top">
-  <%= button_to "始めよう！", blogs_path, {method: :get, class: 'top_btn'} %>
+  <%= button_to "アカウント登録", new_user_path, {method: :get, class: 'top_btn'} %>
+</div>
+<div class="top">
+  <%= button_to "ログイン", new_session_path, {method: :get, class: 'top_btn'} %>
 </div>

@@ -1,0 +1,17 @@
+<div class="show">
+  <p>ユーザー詳細</p>
+  <br>
+  <div class="user_name">
+    <p>【名前】</p>
+    <div class="name">
+      <%= @user.name %>
+    </div>
+  </div>
+  <div class="user_email">
+    <p>【アドレス】</p>
+    <div class="email">
+      <%= @user.email %>
+    </div>
+  </div>
+    <%= button_to "登録後、ログインする", new_session_path, {method: :get, class: 'login_btn'} %>
+</div>

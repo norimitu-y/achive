@@ -4,6 +4,15 @@ ul {
   overflow: scroll;
   background-color: rgb(242, 242, 242);
 }
+li.index_user {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+li.flash_massege {
+  font-size: 16px;
+  margin-top: 10px;
+}
 ul.content {
   border-bottom: solid 1px #a4a4a4;
   height: 780px;

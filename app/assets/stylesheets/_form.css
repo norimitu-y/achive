@@ -1,8 +1,8 @@
 ._form {
     text-align: center;
 }
-.blog_content {
-  margin-top: 60px;
+.blog_content, .user_email, .user_password, .user_password_confirmation {
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .blog_content label {
@@ -16,9 +16,20 @@
     padding-left: 10px;
 }
 .blog_title textarea {
-    border-radius: 8px;
-    font-size: 15px;
-    height: 30px;
-    border-color: black;
-    padding-left: 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  height: 40px;
+  border-color: black;
+  padding-left: 10px;
+}
+.user_name input, .user_email input, .user_password input, .user_password_confirmation input  {
+  border-radius: 8px;
+  font-size: 15px;
+  height: 30px;
+  border-color: black;
+  padding-left: 10px;
+  border: solid 1px;
+}
+.login_btn {
+  margin-top: 30px;
 }

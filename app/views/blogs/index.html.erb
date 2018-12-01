@@ -1,6 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="side_title col-xs-12 col-md-4">
+      <p>ユーザー情報</p>
+      <ul>
+        <li class="flash_massege">
+          <% flash.each do |key, value| %>
+            <%= content_tag(:div, value, class: "#{key}") %>
+          <% end %>
+        </li>
+        <li class="index_user">
+          【ユーザー名】<%= current_user.name %>
+        </li>
+        <%= button_to "ユーザー詳細", user_path(current_user.id), {method: :get, class: 'top_btn'} %>
+        <br>
+        <%= button_to "ログアウト", session_path(current_user.id), {method: :delete, class: 'top_btn'} %>
+      </ul>
       <p>タイトル一覧</p>
       <ul>
         <% @blogs.reverse_each do |blog| %>
