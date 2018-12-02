@@ -44,17 +44,17 @@
   margin-top: 15px;
 }
  .container {
-     width: 980px;
-     margin: 0 auto;
-     min-height: 100%;
-     position: relative;
+     width: 100%;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
      overflow: scroll;
  }
  .footer {
      background-color: rgba(12, 19, 173, 0.87);
-     height: 40px;
+     height: 50px;
      width: 100%;
-     position: absolute;
+     margin-top: auto;
      bottom: 0;
      display: table;
  }

@@ -1,16 +1,18 @@
-<div class="show">
-  <p>詳細</p>
-  <br>
-  <div class="blog_title">
-    <p>【タイトル】</p>
-    <div class="title">
-      <%= @blog.title %>
+<div class="container">
+  <div class="show">
+    <p>詳細</p>
+    <br>
+    <div class="blog_title">
+      <p>【タイトル】</p>
+      <div class="title">
+        <%= @blog.title %>
+      </div>
+    </div>
+    <div class="blog_content">
+      <p>【内　容】</p>
+      <div class="content">
+        <%= @blog.content %>
+      </div>
     </div>
   </div>
-  <div class="blog_content">
-    <p>【内　容】</p>
-    <div class="content">
-      <%= @blog.content %>
-    </div>
-  </div>
-</div>
+</div>  

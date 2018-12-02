@@ -15,7 +15,7 @@ li.flash_massege {
 }
 ul.content {
   border-bottom: solid 1px #a4a4a4;
-  height: 730px;
+  height: 800px;
   overflow: scroll;
 }
 .header{
@@ -25,7 +25,6 @@ ul.content {
 }
 .container{
     margin-top:16px;
-    padding-bottom: 100px;
 }
 .btn-circle {
 width: 30px;

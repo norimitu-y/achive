@@ -1,22 +1,24 @@
-<div class="confirm">
-  <p>内容の確認</p>
-  <br>
-  <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
-    <%= form.hidden_field :title %>
-    <%= form.hidden_field :content %>
-
-    <p>【タイトル】</p>
-    <p><%= @blog.title %></p>
-    <p>【本文】</p>
-    <p><%= @blog.content %></p>
+<div class="container">
+  <div class="confirm">
+    <p>内容の確認</p>
     <br>
-    <%= form.submit "投稿" %>
+    <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+      <%= form.hidden_field :title %>
+      <%= form.hidden_field :content %>
 
-  <% end %>
-  <br>
-  <%= form_with(model: @blog, url: new_blog_path, local: true, method: "get") do |form| %>
-    <%= form.hidden_field :title %>
-    <%= form.hidden_field :content %>
-    <%= form.submit "戻る", name: "back" %>
-  <% end %>
-</div>
+      <p>【タイトル】</p>
+      <p><%= @blog.title %></p>
+      <p>【本文】</p>
+      <p><%= @blog.content %></p>
+      <br>
+      <%= form.submit "投稿" %>
+
+    <% end %>
+    <br>
+    <%= form_with(model: @blog, url: new_blog_path, local: true, method: "get") do |form| %>
+      <%= form.hidden_field :title %>
+      <%= form.hidden_field :content %>
+      <%= form.submit "戻る", name: "back" %>
+    <% end %>
+  </div>
+</div>  
