@@ -1,3 +1,5 @@
 .new {
     text-align: center;
+    overflow: scroll;
+    height: 750px;
 }

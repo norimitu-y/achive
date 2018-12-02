@@ -1,6 +1,7 @@
 ._form {
     text-align: center;
 }
+
 .blog_content, .user_email, .user_password, .user_password_confirmation {
   margin-top: 50px;
   margin-bottom: 20px;

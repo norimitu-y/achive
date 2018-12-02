@@ -11,22 +11,24 @@
       </div>
     <% end %>
 
-    <div class = "user_name">
-      <p>【名前】</p>
-      <%= form.text_field :name %>
-    </div>
-    <div class = "user_email">
-      <p>【メールアドレス】</p>
-      <%= form.text_field :email %>
-    </div>
-    <div class = "user_password">
-      <p>【パスワード】</p>
-      <%= form.text_field :password %>
-    </div>
-    <div class = "user_password_confirmation">
-      <p>【確認用パスワード】</p>
-      <%= form.text_field :password_confirmation %>
-    </div>
-    <%= form.submit value = "登録" %>
+    <div class="main_form">
+      <div class = "user_name">
+        <p>【名前】</p>
+        <%= form.text_field :name %>
+      </div>
+      <div class = "user_email">
+        <p>【メールアドレス】</p>
+        <%= form.text_field :email %>
+      </div>
+      <div class = "user_password">
+        <p>【パスワード】</p>
+        <%= form.text_field :password %>
+      </div>
+      <div class = "user_password_confirmation">
+        <p>【確認用パスワード】</p>
+        <%= form.text_field :password_confirmation %>
+      </div>
+      <%= form.submit value = "登録" %>
+    </div>  
   <% end %>
 </div>
