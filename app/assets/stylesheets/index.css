@@ -4,7 +4,7 @@ ul {
   overflow: scroll;
   background-color: rgb(242, 242, 242);
 }
-li.index_user {
+li.user {
   font-size: 16px;
   margin-top: 15px;
   margin-bottom: 20px;
@@ -42,9 +42,14 @@ margin: 10px 7px 15px 5px;
   margin-bottom: 10px;
   padding-left: 15px;
   font-size: 17px;
-
 }
 #index_title {
+  list-style: none;
+  padding: 5px 0 5px 0;
+
+  font-size: 16px;
+}
+#index_user {
   list-style: none;
   padding: 5px 0 5px 0;
   border-top: solid 1px #a4a4a4;
