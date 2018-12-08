@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="side_title col-xs-12 col-md-4">
-      <p>ユーザー情報</p>
+      <p>アカウント情報</p>
       <ul>
         <li class="flash_massege">
           <% flash.each do |key, value| %>
@@ -15,10 +15,10 @@
         <br>
         <%= button_to "ログアウト", session_path(current_user.id), {method: :delete, class: 'top_btn'} %>
       </ul>
-      <p>タイトル一覧</p>
+      <p>お気に入りブログ（タイトル）</p>
       <ul>
-        <% @blogs.reverse_each do |blog| %>
-          <li id="index"><%= blog.title %></li>
+        <% @favorites.reverse_each do |favorite| %>
+          <li id="index"><%= favorite.blog.title %></li>
         <% end %>
       </ul>
     </div>
@@ -26,12 +26,22 @@
     <div class="contents col-xs-12 col-md-8">
       <ul class="content">
         <% @blogs.reverse_each do |blog| %>
+          <li id="index_user">【 <%= blog.user.name %> 】</li>
           <li id="index_title">【 <%= blog.title %> 】</li>
           <li id="index_content"><%= blog.content %></li>
-          <%= link_to "詳細", blog_path(blog.id), class:"btn btn-default btn-circle btn-sm active"  %>
-          <%= link_to "編集", edit_blog_path(blog.id), class:"btn btn-default btn-circle btn-sm active"  %>
-          <%= link_to "消去", blog_path(blog.id), method: :delete, data: {confirm: "本当に削除していいですか？"}, class:"btn btn-default btn-circle btn-sm active" %>
+          <%= link_to "詳細", blog_path(blog.id), class: "btn btn-default btn-circle btn-sm active"  %>
+          <% if blog.user_id == current_user.id %>
+            <%= link_to "編集", edit_blog_path(blog.id), class: "btn btn-default btn-circle btn-sm active"  %>
+            <%= link_to "消去", blog_path(blog.id), method: :delete, data: {confirm: "本当に削除していいですか？"}, class: "btn btn-default btn-circle btn-sm active" %>
           <% end %>
+          <% unless blog.user_id == current_user.id %>
+            <% if @favorite.present? %>
+              <%= link_to '解除', favorite_path(id: @favorite.id), method: :delete, class: "btn btn-default btn-circle btn-sm active" %>
+            <% else %>
+              <%= link_to '登録', favorites_path(blog_id: blog.id), method: :post, class: "btn btn-default btn-circle btn-sm active" %>
+            <% end %>
+          <% end %>
+        <% end %>
       </ul>
     </div>
   </div>

@@ -1,12 +1,13 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:show, :edit, :update, :destroy]
-  before_action :login, only:[:index, :new, :edit, :show, :destroy]
+  before_action :login, only:[:new, :edit, :show, :destroy]
 
   def top
   end
 
   def index
     @blogs = Blog.all
+    @favorites = current_user.favorites
   end
 
   def new
@@ -18,12 +19,12 @@ class BlogsController < ApplicationController
   end
 
   def confirm
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
     render :new if @blog.invalid?
   end
 
   def create
-    @blog = Blog.new(blog_params)
+    @blog = current_user.blogs.build(blog_params)
     if @blog.save
       redirect_to blogs_path, notice: "新しいブログを作成しました!"
     else
@@ -32,6 +33,7 @@ class BlogsController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
   end
 
   def edit
