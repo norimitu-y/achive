@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only:[:show, :edit, :update, :destroy]
-  before_action :login, only:[:new, :edit, :show, :destroy]
+  before_action :login, only:[:index, :new, :edit, :show, :destroy]
 
   def top
   end
@@ -26,7 +26,8 @@ class BlogsController < ApplicationController
   def create
     @blog = current_user.blogs.build(blog_params)
     if @blog.save
-      redirect_to blogs_path, notice: "新しいブログを作成しました!"
+      BlogMailer.blog_mail(@blog).deliver
+      redirect_to blogs_path, notice: "新しいブログを投稿しました!"
     else
       render "new"
     end

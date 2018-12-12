@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-
-  get 'sessions/new'
-
   root to: "blogs#top"
+  get 'sessions/new'
 
   resources :blogs do
     collection do
       post :confirm
-      post :top
+      post :top  
     end
   end
 
@@ -17,4 +15,5 @@ Rails.application.routes.draw do
 
   resources :favorites, only:[:create, :destroy]
 
+  mount LetterOpenerWeb::Engine, at: "/inbox" if Rails.env.development?
 end
