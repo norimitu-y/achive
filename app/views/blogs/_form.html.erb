@@ -22,6 +22,7 @@
     <div class="blog_image">
       <p>【画像】</p>
       <%= image_tag(@blog.image.url) if @blog.image.url %>
+      <br>
       <%= form.file_field :image %>
     </div>
     <%= form.submit value = "投稿" %>
