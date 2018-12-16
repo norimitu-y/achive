@@ -20,3 +20,9 @@
 .name, .email {
   font-size: 20px;
 }
+img {
+  max-height: 200px;
+  max-width: 500px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
