@@ -1,5 +1,5 @@
 <div class="_form">
-  <%= form_with(model: @blog, local: true, url: choose_new_or_edit) do |form| %>
+  <%= form_with(model: @blog, local: true, url: choose_new_or_edit ) do |form| %>
     <% if @blog.errors.any? %>
       <div id = "error_explanation">
         <h2><%= @blog.errors.count %>件のエラーがあります</h2>
@@ -18,6 +18,11 @@
     <div class = "blog_content">
       <p>【本文】</p>
       <%= form.text_area :content %>
+    </div>
+    <div class="blog_image">
+      <p>【画像】</p>
+      <%= image_tag(@blog.image.url) if @blog.image.url %>
+      <%= form.file_field :image %>
     </div>
     <%= form.submit value = "投稿" %>
   <% end %>

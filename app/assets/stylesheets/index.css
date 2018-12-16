@@ -63,3 +63,11 @@ margin: 10px 7px 15px 5px;
 p {
   font-size: 18px;
 }
+
+.user_icon {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}

@@ -9,7 +9,8 @@
           <% end %>
         </li>
         <li class="user">
-          【ユーザー名】<%= current_user.name %>
+          【ユーザー】<%= current_user.name %>
+          <li><%= image_tag current_user.image, class: :"user_icon" %></li>
         </li>
         <%= button_to "ユーザー詳細", user_path(current_user.id), {method: :get, class: 'top_btn'} %>
         <br>
@@ -29,6 +30,7 @@
           <li id="index_user">投稿者： <%= blog.user.name %> </li>
           <li id="index_title">タイトル：<%= blog.title %> </li>
           <li id="index_content"><%= blog.content %></li>
+          <li id="index_image"><%= image_tag blog.image %></li>
           <%= link_to "詳細", blog_path(blog.id), class: "btn btn-default btn-circle btn-sm active"  %>
           <% if blog.user_id == current_user.id %>
             <%= link_to "編集", edit_blog_path(blog.id), class: "btn btn-default btn-circle btn-sm active"  %>

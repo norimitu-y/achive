@@ -11,3 +11,12 @@
 .title, .content {
   font-size: 20px;
 }
+.user_email {
+  margin-top: 20px;
+}
+.user_show_icon {
+  margin-top: 20px;
+}
+.name, .email {
+  font-size: 20px;
+}

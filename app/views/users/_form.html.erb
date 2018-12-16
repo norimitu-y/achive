@@ -17,6 +17,10 @@
           <p>【名前】</p>
           <%= form.text_field :name %>
         </div>
+        <div class = "user_icon">
+          <p>【ユーザーアイコン】</p>
+          <%= form.file_field :image %>
+        </div>
         <div class = "user_email">
           <p>【メールアドレス】</p>
           <%= form.text_field :email %>
@@ -33,4 +37,4 @@
       </div>
     <% end %>
   </div>
-</div>  
+</div>

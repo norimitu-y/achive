@@ -8,6 +8,10 @@
         <%= @user.name %>
       </div>
     </div>
+    <div class="user_show_icon">
+      <p>【ユーザーアイコン】</p>
+      <%= image_tag @user.image, class: :"icon" %>
+    </div>
     <div class="user_email">
       <p>【アドレス】</p>
       <div class="email">
